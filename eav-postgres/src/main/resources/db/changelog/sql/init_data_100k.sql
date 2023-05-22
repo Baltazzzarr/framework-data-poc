@@ -1,0 +1,1 @@
+call generate_data(100000);

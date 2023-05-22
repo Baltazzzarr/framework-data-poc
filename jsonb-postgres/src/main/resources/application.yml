@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5431/jsonb
+    username: jsonb
+    password: jsonb
+  liquibase:
+    change-log: db/changelog/changelog.yaml
+    drop-first: true
+    contexts: ${LIQUIBASE_CONTEXTS:default,1m_elem,indexes}

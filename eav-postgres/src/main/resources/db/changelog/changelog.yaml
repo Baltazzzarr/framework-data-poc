@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: schema
+      author: me
+      context: default
+      changes:
+        - sqlFile:
+            path: db/changelog/sql/init_schema.sql
+        - sqlFile:
+            path: db/changelog/sql/init_functions.sql
+            splitStatements: false
+        - sqlFile:
+            path: db/changelog/sql/init_attributes_dictionaries.sql
+  - changeSet:
+      id: data100k
+      author: me
+      context: 100k_elem
+      changes:
+        - sqlFile:
+            path: db/changelog/sql/init_data_100k.sql
+            splitStatements: false
+  - changeSet:
+      id: data1m
+      author: me
+      context: 1m_elem
+      changes:
+        - sqlFile:
+            path: db/changelog/sql/init_data_1m.sql
+            splitStatements: false
+  - changeSet:
+      id: data10m
+      author: me
+      context: 10m_elem
+      changes:
+        - sqlFile:
+            path: db/changelog/sql/init_data_10m.sql
+            splitStatements: false
+  - changeSet:
+      id: indexes
+      author: me
+      context: indexes
+      changes:
+        - sqlFile:
+            path: db/changelog/sql/indexes.sql
+            splitStatements: false

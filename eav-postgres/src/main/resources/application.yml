@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/eav
+    username: eav
+    password: eav
+  liquibase:
+    change-log: db/changelog/changelog.yaml
+    drop-first: false
+    contexts: ${LIQUIBASE_CONTEXTS:default,1m_elem,indexes}

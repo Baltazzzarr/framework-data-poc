@@ -1,0 +1,4 @@
+rootProject.name = 'framework-data-poc'
+include 'eav-postgres'
+include 'jsonb-postgres'
+
